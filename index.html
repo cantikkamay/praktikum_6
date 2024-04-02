@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Diri Mahasiswa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .page-content {
+      display: none;
+      padding: 20px;
+    }
+    .profile-img {
+      max-width: 180px;
+      height: auto;
+    }
+    .course-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    #page1 {
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+   
+    #page2 {
+      background-color: #d1ecf1;
+      border: 1px solid #bee5eb;
+      border-radius: 5px;
+    }
+    
+    #page3 {
+      background-color: #e2e3e5;
+      border: 1px solid #d6d8db;
+      border-radius: 5px;
+    }
+  
+    #page4 {
+      background-color: #FBE4FF;
+      border: 1px solid #FCC2FF;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#page1">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#page2">Mata Kuliah</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#page3">Pengalaman</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#page4">Proyek</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="page-content" id="page1">
+    <h1>Profil</h1>
+    <img class="profile-img" src="foto .jpg" alt="Foto Profil">
+    <p>Nama: Cantikka May Aristianti</p>
+    <p>NIM: 234311010</p>
+    <p>Jurusan: Teknologi Rekayasa Perangkat Lunak</p>
+    <p>PTN: Politeknik Negeri Madiun</p>
+    <p>Semester: 2</p>
+  </div>
+  <div class="page-content" id="page2">
+    <h1>Mata Kuliah yang Diambil</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="course-box">
+          <h3>Semester 1</h3>
+          <ul>
+            <li>Algoritma dan Pemrograman</li>
+            <li>Basis Data</li>
+            <li>Matematika Diskrit</li>
+            <li>Rekayasa Kebutuhan Perangkat Lunak</li>
+            <li>Bahasa Indonesia</li>
+            <li>Keselamatan dan Kesehatan Kerja</li>
+            <li>Organisasi dan Arsitektur Komputer</li>
+            <li>Praktik Algoritma dan Pemrograman</li>
+            <li>Praktik Basis Data</li>
+            <li>Logika Informatika</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="course-box">
+          <h3>Semester 2</h3>
+          <ul>
+            <li>Pemrograman Berbasis Web</li>
+            <li>Pemrograman Berbasis Objek</li>
+            <li>Struktur data</li>
+            <li>Agama</li>
+            <li>Metode dan Model Pengembangan Perangkat Lunak</li>
+            <li>Sistem Operasi</li>
+            <li>Teknologi Informasi</li>
+            <li>Analisis dan Perancangan Perangkat Lunak</li>
+            <li>Praktik Pemrograman Berbasis Web</li>
+            <li>Pr
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content" id="page3">
+      <h1>Pengalaman</h1>
+      <p><li>Pengalaman organisasi di OSIS SMAN 1 KAWEDANAN (2019)</li></p>
+      <p><li>Pengalaman organisasi di OSIS SMAN 1 KAWEDANAN (2020)</li></p>
+      <p><li>Pengalaman magang di perusahaan 'Cantikka'</li></p>
+      <p><li>Pengalaman kerja paruh waktu di kafe 'May'</li></p>
+    </div>
+    <div class="page-content" id="page4">
+      <h1>Proyek</h1>
+      <p><li>Proyek pembuatan website data diri</li></p>
+      <p><li>Proyek pengembangan aplikasi mobile 'SejahteraApp'</li></p>
+      <p><li>Proyek pengembangan Website Universitas</li></p>
+      <p><li>Proyek pembuatan website sederhana</li></p>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $('#page1').show();
+      
+      $('.nav-link').click(function(){
+        $('.page-content').hide();
+        var target = $(this).attr('href');
+        $(target).show();
+      });
+    });
+  </script>
+  </body>
+  </html>
